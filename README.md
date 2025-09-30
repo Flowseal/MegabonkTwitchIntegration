@@ -19,7 +19,7 @@ A BepInEx plugin that brings your Twitch chat directly into Megabonk! Watch as y
 ## 📦 Installation
 
 1. Install [latest BepInEx](https://thunderstore.io/c/megabonk/p/BepInEx/BepInExPack_IL2CPP/) for Megabonk
-2. Download the latest release from mod page or Releases
+2. Download the latest release from mod page or [Releases](https://github.com/Flowseal/MegabonkTwitchIntegration/releases)
 3. Extract the plugin to `BepInEx/plugins` folder
 4. Launch Megabonk **and configure your Twitch channel and other settings in the config file (`BepInEx/config/TwitchIntegration.cfg`)**
 

@@ -1,0 +1,9 @@
+{
+    "name": "TwitchIntegration",
+    "description": "Bring your Twitch chat directly into Megabonk! Watch as your viewers become part of the game experience and more...",
+    "version_number": "1.0.0",
+    "dependencies": [
+        "BepInEx-BepInExPack_IL2CPP-6.0.738"
+    ],
+    "website_url": "https://github.com/Flowseal/MegabonkTwitchIntegration"
+}

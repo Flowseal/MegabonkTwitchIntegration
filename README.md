@@ -6,7 +6,7 @@ A BepInEx plugin that brings your Twitch chat directly into Megabonk! Watch as y
 
 ### 🎯 Boss integration
 * Bosses are automatically renamed to random Twitch chatters
-* Assigned chatter's messages will appear above boss
+* The assigned chatter's messages will appear above the boss
 
 ### 👥 Chatters invasion
 * Regular enemies get random Twitch usernames as nicknames
@@ -14,7 +14,7 @@ A BepInEx plugin that brings your Twitch chat directly into Megabonk! Watch as y
 
 ### 📊 (soon) Vote for choices
 * Viewers can vote in the chat for the choice of an improvement or an item
-* **Currenly in-development** as I want to make a well-thought-out system so that a stream delay of some viewers does not interfere with the actual voting
+* **Currently in-development** as I want to make a well-thought-out system so that a stream delay of some viewers does not interfere with the actual voting
 
 ## 📦 Installation
 

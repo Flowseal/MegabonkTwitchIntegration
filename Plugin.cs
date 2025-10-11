@@ -24,7 +24,7 @@ public class Plugin : BasePlugin
 
         twitchIntegrationObject = new GameObject("TwitchIntegration");
         twitchIntegrationObject.AddComponent<TwitchIntegrationBase>();
-        Object.DontDestroyOnLoad(twitchIntegrationObject);
+        UnityEngine.Object.DontDestroyOnLoad(twitchIntegrationObject);
 
         Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
     }
@@ -33,7 +33,7 @@ public class Plugin : BasePlugin
     {
         if (twitchIntegrationObject != null)
         {
-            Object.Destroy(twitchIntegrationObject);
+            UnityEngine.Object.Destroy(twitchIntegrationObject);
             twitchIntegrationObject = null;
         }
 

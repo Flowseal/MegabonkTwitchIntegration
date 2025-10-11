@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#nullable disable
+using Il2CppSystem;
+using UnityEngine;
 
 namespace TwitchIntegration;
 
@@ -7,15 +9,12 @@ public class TwitchIntegrationBase : MonoBehaviour
     private readonly Chat chat = new Chat();
     private readonly Bosses bosses = new Bosses();
     private readonly Nicknames nicknames = new Nicknames();
+    private string lastTwitchChannel = string.Empty;
 
     public void Awake()
     {
         this.gameObject.hideFlags = HideFlags.HideAndDontSave;
         Plugin.Log.LogInfo("Awake called");
-
-        chat.Reset();
-        bosses.Reset();
-        nicknames.Reset();
     }
 
     public void Start()
@@ -24,17 +23,19 @@ public class TwitchIntegrationBase : MonoBehaviour
 
         chat.RegisterMessageCallback(bosses.ProcessNewChatMessage);
         chat.RegisterMessageCallback(nicknames.AddChatter);
-
-        PluginConfig.ConfigFile.SettingChanged += (sender, args) =>
-        {
-            chat.Reset();
-            bosses.Reset();
-            nicknames.Reset();
-        };
     }
 
     public void Update()
     {
+        if (lastTwitchChannel != PluginConfig.TwitchChannel.Value)
+        {
+            lastTwitchChannel = PluginConfig.TwitchChannel.Value;
+            
+            chat.Reset();
+            bosses.Reset();
+            nicknames.Reset();
+        }
+
         chat.Update();
 
         if (PluginConfig.EnableBosses.Value)
